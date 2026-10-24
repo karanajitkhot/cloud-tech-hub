@@ -4,10 +4,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudTech Hub</title>
+    <meta name="theme-color" content="#050b25">
+    <meta name="description" content="Explore cloud hosting, provisioning and scalability with CloudTech Hub.">
+    <title>CloudTech Hub | Build. Deploy. Scale.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to My Cloud Website</h1>
-    <p>This website is running on the cloud.</p>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            <span class="logo-icon">☁</span>
+            CloudTech <span class="accent">Hub</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav" id="navigation">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">BUILD <span>•</span> DEPLOY <span>•</span> SCALE</p>
+
+                <h1>
+                    Welcome to My
+                    <span class="gradient-text">Cloud Website</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover the power of cloud computing.
+                    Build, deploy and scale digital experiences
+                    with modern cloud technologies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#services" class="button button-primary">
+                        Explore Cloud Technology <span>→</span>
+                    </a>
+                    <a href="#about" class="button button-outline">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Cloud Access</span>
+                    </div>
+                    <div>
+                        <strong>Flexible</strong>
+                        <span>Resources</span>
+                    </div>
+                    <div>
+                        <strong>Scalable</strong>
+                        <span>Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Cloud computing illustration">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="cloud-art">☁</div>
+
+                <div class="server server-one">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="server server-two">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="server server-three">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <div class="floating-tag tag-one">☁ Cloud Hosting</div>
+                <div class="floating-tag tag-two">↗ Auto Scaling</div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT CLOUD CAN DO</p>
+                <h2>Explore Our <span class="gradient-text">Services</span></h2>
+                <p>Discover the essential concepts behind modern cloud infrastructure.</p>
+            </div>
+
+            <div class="card-grid">
+                <article class="service-card card-blue">
+                    <div class="card-icon">☁</div>
+                    <h3>Cloud Hosting</h3>
+                    <p>
+                        Host websites and applications on cloud infrastructure
+                        and access them through the internet.
+                    </p>
+                    <a href="#about" class="learn-link">Learn More →</a>
+                </article>
+
+                <article class="service-card card-purple">
+                    <div class="card-icon">▤</div>
+                    <h3>Provisioning</h3>
+                    <p>
+                        Allocate computing resources such as servers,
+                        storage and networking when required.
+                    </p>
+                    <a href="#about" class="learn-link">Learn More →</a>
+                </article>
+
+                <article class="service-card card-cyan">
+                    <div class="card-icon">▥</div>
+                    <h3>Scalability</h3>
+                    <p>
+                        Increase or decrease available resources
+                        as application workloads change.
+                    </p>
+                    <a href="#demo" class="learn-link">Try the Demo →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="about-content">
+                <p class="eyebrow">CLOUD COMPUTING EXPLAINED</p>
+                <h2>Powering the <span class="gradient-text">Digital World</span></h2>
+                <p>
+                    Cloud computing provides on-demand access to computing
+                    resources over the internet. Provisioning helps allocate
+                    resources, while scaling adjusts capacity to meet demand.
+                </p>
+            </div>
+
+            <div class="about-visual">
+                <div class="about-cloud">☁</div>
+                <div class="about-line"></div>
+                <div class="about-nodes">
+                    <span>Compute</span>
+                    <span>Storage</span>
+                    <span>Network</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo section" id="demo">
+            <div class="section-heading">
+                <p class="eyebrow">INTERACTIVE DEMONSTRATION</p>
+                <h2>Provision & <span class="gradient-text">Scale</span></h2>
+                <p>Explore a simple simulation of cloud server provisioning and scaling.</p>
+            </div>
+
+            <div class="demo-panel">
+                <div class="demo-status">
+                    <span class="status-dot"></span>
+                    <span id="statusText">No servers provisioned</span>
+                </div>
+
+                <div class="server-count">
+                    <span id="serverCount">0</span>
+                    <span>Servers</span>
+                </div>
+
+                <div class="server-visualization" id="serverVisualization">
+                    <div class="empty-server">☁</div>
+                </div>
+
+                <div class="demo-buttons">
+                    <button class="button button-primary" id="provisionBtn">
+                        Provision Website
+                    </button>
+                    <button class="button button-outline" id="scaleBtn">
+                        Scale to 3 Servers
+                    </button>
+                    <button class="button button-reset" id="resetBtn">
+                        Reset
+                    </button>
+                </div>
+
+                <p class="demo-note">
+                    Educational simulation only. These buttons do not create
+                    or scale real cloud servers.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <p class="eyebrow">START EXPLORING</p>
+            <h2>Ready to Explore the <span class="gradient-text">Cloud?</span></h2>
+            <p>Learn how hosting, provisioning and scaling work together.</p>
+            <a href="#home" class="button button-primary">Back to Top ↑</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="logo footer-logo">
+            ☁ CloudTech <span class="accent">Hub</span>
+        </a>
+        <p>© <span id="year"></span> CloudTech Hub | Cloud Computing Experiment</p>
+        <p class="footer-caption">Build. Deploy. Scale.</p>
+    </footer>
+
 </body>
 </html>
